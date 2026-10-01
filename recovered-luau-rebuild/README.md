@@ -1,42 +1,36 @@
-# Senz hub
+# Senz Hub
 
-A repository-ready reconstruction workspace for a virtualized/obfuscated Luau payload.
+Roblox Studio-safe rebuild of the recovered Luau project.
 
-## Status
+## Run
 
-This branch contains two distinct layers:
+1. Open Roblox Studio.
+2. Go to `StarterPlayer > StarterPlayerScripts`.
+3. Add a `LocalScript` named `SenzHub`.
+4. Paste `src/SenzHub.client.lua`.
+5. Press **Play**.
 
-- `src/`: a **Roblox Studio-safe scaffold**. It deliberately does not recreate executor/exploit-only primitives.
-- `analysis/`: recovered VM/runtime metadata used to continue reconstructing the original program logic.
+Press **RightShift** to toggle the menu.
 
-The reconstruction is **not yet a byte-for-byte recovery of the original source**. Original local variable names, comments, formatting, and some VM-level semantics were destroyed by virtualization and cannot be recovered verbatim.
+## Menu
 
-## Layout
+- Dashboard
+- Path2D demo
+- Runtime information
+- About / reconstruction status
 
-```text
-src/
-  RuntimeSafe.lua
-  RecoveredMain.client.lua
-analysis/
-  recovered_runtime_table.lua
-  recovered_opcode_map.md
-docs/
-  BUILD_GUIDE_SAFE.md
-  reconstruction_status.tsv
-default.project.json
-```
+## Rojo
 
-## Roblox Studio / Rojo
-
-With Rojo installed:
+Run:
 
 ```bash
 rojo serve
 ```
 
-Then connect the Rojo Studio plugin to the local server.
+The project maps `src/SenzHub.client.lua` to `StarterPlayerScripts/SenzHub`.
 
-- `src/RecoveredMain.client.lua` -> `StarterPlayer/StarterPlayerScripts/RecoveredMain`
-- `src/RuntimeSafe.lua` -> `StarterPlayer/StarterPlayerScripts/RuntimeSafe`
+## Analysis files
 
-See `docs/BUILD_GUIDE_SAFE.md` for the current porting/reconstruction workflow.
+The `analysis/` and `docs/` directories keep the recovered VM/runtime material used during reconstruction.
+
+This Studio build does not use `loadstring`, executor-only APIs, or remote-code execution.
