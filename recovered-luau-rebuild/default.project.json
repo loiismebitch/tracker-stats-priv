@@ -1,15 +1,12 @@
 {
-  "name": "Senz hub",
+  "name": "Senz Hub",
   "tree": {
     "$className": "DataModel",
     "StarterPlayer": {
       "StarterPlayerScripts": {
         "$className": "StarterPlayerScripts",
-        "RecoveredMain": {
-          "$path": "src/RecoveredMain.client.lua"
-        },
-        "RuntimeSafe": {
-          "$path": "src/RuntimeSafe.lua"
+        "SenzHub": {
+          "$path": "src/SenzHub.client.lua"
         }
       }
     }
