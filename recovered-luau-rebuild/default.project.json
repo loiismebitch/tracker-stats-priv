@@ -1,0 +1,17 @@
+{
+  "name": "recovered-luau-rebuild",
+  "tree": {
+    "$className": "DataModel",
+    "StarterPlayer": {
+      "StarterPlayerScripts": {
+        "$className": "StarterPlayerScripts",
+        "RecoveredMain": {
+          "$path": "src/RecoveredMain.client.lua"
+        },
+        "RuntimeSafe": {
+          "$path": "src/RuntimeSafe.lua"
+        }
+      }
+    }
+  }
+}

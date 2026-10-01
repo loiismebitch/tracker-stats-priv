@@ -1,0 +1,7 @@
+item	count
+opcode_placeholders	107
+upvalue_index_access	52
+capture_box_writes	35
+goto_statements	1537
+labels	1102
+runtime_internal	17
